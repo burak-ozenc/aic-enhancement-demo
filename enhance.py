@@ -39,7 +39,7 @@ _probe_done = threading.Event()
 
 # Extra silence prepended before audio to allow model state to warm up.
 # Discarded from output — prevents the unstable-first-frames artifact.
-_WARMUP_SECONDS = 0.5
+_WARMUP_SECONDS = 0.2
 
 
 # ---------------------------------------------------------------------------
