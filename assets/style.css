@@ -1,0 +1,81 @@
+﻿/* ── Dropdown: control (the visible input box) ── */
+.Select-control,
+.Select--multi .Select-control {
+    background-color: #2d3748 !important;
+    border-color: #4a5568 !important;
+    color: #e2e8f0 !important;
+}
+
+/* ── Dropdown: selected single value ── */
+.Select-value-label,
+.Select-placeholder {
+    color: #e2e8f0 !important;
+}
+
+/* ── Dropdown: multi selected tags ── */
+.Select--multi .Select-value {
+    background-color: #4a5568 !important;
+    border-color: #718096 !important;
+    color: #e2e8f0 !important;
+}
+
+.Select--multi .Select-value-icon {
+    border-color: #718096 !important;
+    color: #e2e8f0 !important;
+}
+
+.Select--multi .Select-value-icon:hover {
+    background-color: #667eea !important;
+    color: white !important;
+}
+
+/* ── Dropdown: input text while typing ── */
+.Select-input > input {
+    color: #e2e8f0 !important;
+}
+
+/* ── Dropdown: open menu container ── */
+.Select-menu-outer {
+    background-color: #2d3748 !important;
+    border-color: #4a5568 !important;
+    z-index: 9999 !important;
+}
+
+/* ── Dropdown: individual options ── */
+.Select-option {
+    background-color: #2d3748 !important;
+    color: #e2e8f0 !important;
+}
+
+.Select-option:hover,
+.Select-option.is-focused {
+    background-color: #4a5568 !important;
+    color: #e2e8f0 !important;
+}
+
+.Select-option.is-selected {
+    background-color: #667eea !important;
+    color: white !important;
+}
+
+/* ── Dropdown: arrow icon ── */
+.Select-arrow {
+    border-top-color: #a0aec0 !important;
+}
+
+.Select-arrow-zone:hover .Select-arrow {
+    border-top-color: #e2e8f0 !important;
+}
+
+/* ── Dropdown: clear button ── */
+.Select-clear {
+    color: #a0aec0 !important;
+}
+
+/* ── Remove white flash on focused control ── */
+.is-focused .Select-control,
+.is-focused:not(.is-open) .Select-control {
+    background-color: #2d3748 !important;
+    border-color: #667eea !important;
+    box-shadow: 0 0 0 1px #667eea !important;
+}
