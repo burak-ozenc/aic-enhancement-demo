@@ -1,81 +1,112 @@
-﻿/* ── Dropdown: control (the visible input box) ── */
-.Select-control,
-.Select--multi .Select-control {
+﻿/* ─── Dark dropdown theme ─────────────────────────────────────────────────
+   Applied via className="dark-dropdown" on each dcc.Dropdown component.
+   Using high specificity + !important to override Dash's built-in styles.
+─────────────────────────────────────────────────────────────────────────── */
+
+/* Outer container */
+.dark-dropdown .Select-control {
     background-color: #2d3748 !important;
-    border-color: #4a5568 !important;
+    border: 1px solid #4a5568 !important;
     color: #e2e8f0 !important;
 }
 
-/* ── Dropdown: selected single value ── */
-.Select-value-label,
-.Select-placeholder {
-    color: #e2e8f0 !important;
-}
-
-/* ── Dropdown: multi selected tags ── */
-.Select--multi .Select-value {
-    background-color: #4a5568 !important;
-    border-color: #718096 !important;
-    color: #e2e8f0 !important;
-}
-
-.Select--multi .Select-value-icon {
-    border-color: #718096 !important;
-    color: #e2e8f0 !important;
-}
-
-.Select--multi .Select-value-icon:hover {
-    background-color: #667eea !important;
-    color: white !important;
-}
-
-/* ── Dropdown: input text while typing ── */
-.Select-input > input {
-    color: #e2e8f0 !important;
-}
-
-/* ── Dropdown: open menu container ── */
-.Select-menu-outer {
-    background-color: #2d3748 !important;
-    border-color: #4a5568 !important;
-    z-index: 9999 !important;
-}
-
-/* ── Dropdown: individual options ── */
-.Select-option {
-    background-color: #2d3748 !important;
-    color: #e2e8f0 !important;
-}
-
-.Select-option:hover,
-.Select-option.is-focused {
-    background-color: #4a5568 !important;
-    color: #e2e8f0 !important;
-}
-
-.Select-option.is-selected {
-    background-color: #667eea !important;
-    color: white !important;
-}
-
-/* ── Dropdown: arrow icon ── */
-.Select-arrow {
-    border-top-color: #a0aec0 !important;
-}
-
-.Select-arrow-zone:hover .Select-arrow {
-    border-top-color: #e2e8f0 !important;
-}
-
-/* ── Dropdown: clear button ── */
-.Select-clear {
-    color: #a0aec0 !important;
-}
-
-/* ── Remove white flash on focused control ── */
-.is-focused .Select-control,
-.is-focused:not(.is-open) .Select-control {
+/* Focused state */
+.dark-dropdown .Select.is-focused .Select-control,
+.dark-dropdown .Select.is-focused:not(.is-open) .Select-control {
     background-color: #2d3748 !important;
     border-color: #667eea !important;
     box-shadow: 0 0 0 1px #667eea !important;
+}
+
+/* Single selected value text */
+.dark-dropdown .Select-value-label,
+.dark-dropdown .dash-dropdown-value {
+    color: #e2e8f0 !important;
+}
+
+/* Placeholder text */
+.dark-dropdown .Select-placeholder {
+    color: #718096 !important;
+}
+
+/* Typing input */
+.dark-dropdown .Select-input > input {
+    color: #e2e8f0 !important;
+    background-color: transparent !important;
+}
+
+/* Arrow icon */
+.dark-dropdown .Select-arrow {
+    border-top-color: #a0aec0 !important;
+}
+
+.dark-dropdown .Select-arrow-zone:hover .Select-arrow {
+    border-top-color: #e2e8f0 !important;
+}
+
+/* ── Multi-select tags ───────────────────────────────────────────────────── */
+
+.dark-dropdown .Select--multi .Select-value {
+    background-color: #4a5568 !important;
+    border-color: #718096 !important;
+    color: #e2e8f0 !important;
+    border-radius: 4px !important;
+}
+
+.dark-dropdown .Select--multi .Select-value-label {
+    color: #e2e8f0 !important;
+}
+
+.dark-dropdown .Select--multi .Select-value-icon {
+    border-right-color: #718096 !important;
+    color: #a0aec0 !important;
+}
+
+.dark-dropdown .Select--multi .Select-value-icon:hover {
+    background-color: #667eea !important;
+    color: white !important;
+}
+
+/* ── Dropdown menu ───────────────────────────────────────────────────────── */
+
+.dark-dropdown .Select-menu-outer {
+    background-color: #2d3748 !important;
+    border: 1px solid #4a5568 !important;
+    z-index: 9999 !important;
+}
+
+.dark-dropdown .Select-menu {
+    background-color: #2d3748 !important;
+}
+
+/* Individual options */
+.dark-dropdown .Select-option {
+    background-color: #2d3748 !important;
+    color: #e2e8f0 !important;
+}
+
+.dark-dropdown .Select-option.is-focused {
+    background-color: #4a5568 !important;
+    color: #e2e8f0 !important;
+}
+
+.dark-dropdown .Select-option.is-selected {
+    background-color: #667eea !important;
+    color: white !important;
+}
+
+.dark-dropdown .Select-option.is-selected.is-focused {
+    background-color: #764ba2 !important;
+    color: white !important;
+}
+
+/* ── Global Dash overrides (class names from Dash 2.17+) ─────────────────── */
+
+.dash-dropdown-value {
+    color: #e2e8f0 !important;
+}
+
+.dark-dropdown .Select-control,
+.dark-dropdown .dash-dropdown .Select-control {
+    background-color: #2d3748 !important;
 }

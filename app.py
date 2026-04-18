@@ -29,6 +29,43 @@ from enhance import (
 app    = Dash(__name__, title="ai-coustics Enhancement Demo")
 server = app.server
 
+app.index_string = '''
+<!DOCTYPE html>
+<html>
+    <head>
+        {%metas%}
+        <title>{%title%}</title>
+        {%favicon%}
+        {%css%}
+        <style>
+            /* Target every possible child of our dropdowns by ID */
+            #noise-type-dropdown, #model-dropdown,
+            #noise-type-dropdown *, #model-dropdown * {
+                color: #e2e8f0 !important;
+                background-color: #2d3748 !important;
+            }
+            /* Dropdown open menu — rendered outside the parent in a portal */
+            .dash-dropdown-menu, .dash-dropdown-menu *,
+            .dash-dropdown-option, .dash-dropdown-option * {
+                color: #e2e8f0 !important;
+                background-color: #2d3748 !important;
+            }
+            .dash-dropdown-option:hover, .dash-dropdown-option:hover * {
+                background-color: #4a5568 !important;
+            }
+        </style>
+    </head>
+    <body>
+        {%app_entry%}
+        <footer>
+            {%config%}
+            {%scripts%}
+            {%renderer%}
+        </footer>
+    </body>
+</html>
+'''
+
 preload_default_model()
 start_model_probe()
 
@@ -154,7 +191,8 @@ app.layout = html.Div(
                     html.Label("Noise Type (select one or more)", style=LBL),
                     dcc.Dropdown(id="noise-type-dropdown",
                                  options=[{"label": n, "value": n} for n in NOISE_TYPES],
-                                 value=["White"], multi=True, clearable=False, style=DD),
+                                 value=["White"], multi=True, clearable=False,
+                                 style=DD, className="dark-dropdown"),
                 ]),
 
                 # Enhancement Level
@@ -171,7 +209,7 @@ app.layout = html.Div(
                     dcc.Dropdown(id="model-dropdown",
                                  options=[{"label": m, "value": m} for m in available_models],
                                  value=available_models[0],
-                                 clearable=False, style=DD),
+                                 clearable=False, style=DD, className="dark-dropdown"),
                 ]),
             ]),
 
