@@ -1,4 +1,13 @@
-﻿# ai-coustics Enhancement Demo
+﻿---
+title: ai-coustics Enhancement Demo
+emoji: 🎙
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
+
+# ai-coustics Enhancement Demo
 
 Interactive Dash app to damage clean speech with additive noise and restore it using the **ai-coustics SDK**.
 
@@ -8,7 +17,6 @@ Interactive Dash app to damage clean speech with additive noise and restore it u
 |---|---|
 | **Live demo (Render)** | _link here_ |
 | **Live demo (HuggingFace Spaces)** | _link here_ |
-| **Source code** | _this repo_ |
 
 ---
 
